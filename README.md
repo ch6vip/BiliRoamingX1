@@ -1,5 +1,6 @@
 <div align="center">
 
+
 # 哔哩漫游X
 
 [![CI](https://github.com/BiliRoamingX/BiliRoamingX/workflows/CI/badge.svg)](https://github.com/BiliRoamingX/BiliRoamingX/actions)
@@ -8,6 +9,16 @@
 [![Star](https://img.shields.io/github/stars/BiliRoamingX/BiliRoamingX?label=Star&color=important&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAdCAYAAAC5UQwxAAADKUlEQVRIib2WX0iTURTAz737tpWEissM6c9cOUUkCqmHpYEtfAiFyl4yCoQefOmhHozAECGweskMw+hRitRQsD8ULSl0H1mUIDRr5myVpgvJQvP7f+P7Nsfc9s3dMTpw4ePee87vnHvvOeeD/y2IEEKNFOYHMom8lGHedGKWVjcloDJu7QLxRz7exTtpdRlqmurlot+KAHAqutRKsu/YeaQABgIge/e30upTR2hY6K8FEzhADfE3q9DqU0Uo+uoaQFCpQU01UmXS2UJjg+7RjCI3EHBoQFUIABFhGO0lFcmaSDpC6cuZ01p0kZcQilL21TQmayfpCMkoGkIA5TEuKlqkLL/dVWG2ONe80xggH7iXj4XPdiz5rUicKgDBZ8OC36Y+EsDggGj/1HlZ+2KJectXhSnwEaN1Ckw2n8zs8JrzTn1ftZ2bbjeb5i42gwHKkLy0QVNWwBE2hiNGIlEixopTGFjtvg0Zf4kEb+W8C1e1CCVP2XXm1/t9kAGO1NI5gajwJWBJVqEXlXrrNfNMybtzYu6RXuCBTTMOgAOW5FYOqjCIfKVGe3+baDnaC8tphC4Dq+Q4Xcg+eGllatUBGgv72kRLbXdaoBrskAvbXc2R0zE3Zix80C5Zjgeh9I0kAlb1DNufN0cv6eahOFnXYFzoPgmMUk4FE9Gwkl39EO8cuBZvOWHiK2NZj7H053C4lK0lMgDBxpdot1CptzNhEmCymKnlYrKiWiNiwg6kC+R/9uWAqGCqvEQASAIszHYWUwOx4CkNVxwaIeBAwoSdGogEb6wSClUOtWvwoe/oI1cbszBeqmdX97yR4C2KcYcL1kcpt/4O4PUcE7h1VqudplBJDDmAhU9F9EDxY3EYKGiFmZWzK11SXlOLOftgsA1t67gvT9Q0GhYeaUcJ5tDfgOS36tkFNS3iDWUUhsgbIOQ1uGXPnhtcoGej3l5u/sk6yeNoJSPgJiNAyDtwc/MvcLy98Q3MdJSQIXArY9YubqbTrgeKHnzgbr78oeQ2eQVu8VtTVbw9cRNfnL58APFzmxnbzR7do0kg4lRjNWGwZNp65Wkq+ukTAPgHIIGzcZjmG+EAAAAASUVORK5CYII=)](https://github.com/BiliRoamingX/BiliRoamingX)
 
 </div>
+
+使用自建服务器去除了黑名单，注意只是通过自建服务器然后把加密的api替换为了我的api，我仍然可以封禁任何id
+
+所以请勿宣传感谢大家了。
+
+同时我的服务器也可以作为解析服务器使用
+
+hkg.20050405.xyz
+
+只有香港地区的解析
 
 基于 ReVanced 实现的B站 Android 客户端增强模块。模块设置完美融入 APP 设置，功能丰富，自定义程度高。
 得益于实现方式，对 APP 性能几乎没有影响，流畅、迅速、启动快。支持粉版、Play 版及 HD 版。
@@ -31,6 +42,7 @@
 - 更多功能见下图
 
 ## 📱 功能截图
+
 <div align="center">
 <div>
 <img src="assets/images/Screenshot_1.png" width="30%" />
@@ -45,6 +57,7 @@
 </div>
 </div>
 
+
 ## 💻 源码构建
 
 ```shell
@@ -52,15 +65,16 @@ git clone --recurse-submodules https://github.com/BiliRoamingX/BiliRoamingX.git
 cd BiliRoamingX
 ./gradlew dist
 ```
+
 - Windows 系统上使用 `gradlew.bat` 命令而不是 `./gradlew`
 - 构建产物在 `build` 目录下
 
 ## ⬇️ 下载使用
 
-- 前往 [BiliRoamingX-PreBuilds Release](https://github.com/BiliRoamingX/BiliRoamingX-PreBuilds/releases/latest) 下载
+- 直接在[releases](https://github.com/tanji2005/BiliRoamingX1/releases/latest)下载打包好的apk
 - 参照 [revanced-cli](https://github.com/ReVanced/revanced-cli/tree/main/docs) 文档打包
   1. 下载定制版 [revanced-cli.jar](https://github.com/zjns/revanced-cli/releases/latest)
-  2. 从 [releases](https://github.com/BiliRoamingX/BiliRoamingX/releases/latest) 下载 `integrations.apk` 和 `patches.jar`
+  2. 从 [releases](https://github.com/tanji2005/BiliRoamingX1/releases/latest)下载 `integrations.apk` 和 `patches.jar`
   3. 执行终端命令 `java -jar revanced-cli.jar patch --merge integrations.apk --patch-bundle patches.jar --signing-levels 1,2,3 bilibili.apk`
 
 ## ⭐ Star History
@@ -76,3 +90,4 @@ cd BiliRoamingX
 <a href="#start-of-content">👆 回到顶部</a>
 </td></table>
 </div>
+
