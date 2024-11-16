@@ -17,6 +17,10 @@
 同时我的服务器也可以作为解析服务器使用
 
 hkg.20050405.xyz
+如果有人只需要黑名单可以试试这个
+https://dynamic-cendol-dfb532.netlify.app/api/users
+这几个都使用了此项目
+[biliroaming-ts-server-vercel](https://github.com/bili-vd-bak/biliroaming-ts-server-vercel)
 
 只有香港地区的解析
 
