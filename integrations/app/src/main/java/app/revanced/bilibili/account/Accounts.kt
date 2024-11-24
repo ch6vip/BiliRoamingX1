@@ -177,8 +177,8 @@ private fun checkUserStatus() = runCatching {
 }.onFailure {
     if (it is IllegalArgumentException)
         throw it
+        }
     }
-}
 
 class PassportChangeReceiver : BroadcastReceiver() {
 
