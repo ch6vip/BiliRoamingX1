@@ -179,7 +179,6 @@ private fun checkUserStatus() = runCatching {
         throw it
 }
 
-
 class PassportChangeReceiver : BroadcastReceiver() {
 
     companion object {
