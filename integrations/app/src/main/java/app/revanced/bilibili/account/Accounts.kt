@@ -172,14 +172,13 @@ object Accounts {
 
     @JvmStatic
 private fun checkUserStatus() = runCatching {
-    // 这里直接返回，不再进行实际的网络请求等检查黑名单操作
-    // 相当于模拟用户永远不在黑名单中
-    val blockedKey = "user_blocked_$mid";
-    cachePrefs.edit { putBoolean(blockedKey, false) };
+    val blockedKey = "user_blocked_$mid"
+    cachePrefs.edit { putBoolean(blockedKey, false) }
 }.onFailure {
     if (it is IllegalArgumentException)
-        throw it;
+        throw it
 }
+
 
 class PassportChangeReceiver : BroadcastReceiver() {
 
