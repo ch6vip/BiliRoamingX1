@@ -171,23 +171,14 @@ object Accounts {
     private var dialogShowing = false
 
     @JvmStatic
-    private fun checkUserStatus() = runCatching {
-        val mid = Accounts.mid
-        if (mid <= 0) return@runCatching
-        val checkInterval = TimeUnit.HOURS.toMillis(1)
-        val key = "user_status_last_check_time_$mid"
-        val lastCheckTime = cachePrefs.getLong(key, 0L)
-        val current = System.currentTimeMillis()
-        if (lastCheckTime != 0L && current - lastCheckTime < checkInterval)
-            return@runCatching
-        cachePrefs.edit { putLong(key, current) }
-        val api = "https://hkg.20050405.xyz/api/users"
-        val info = HttpClient.get("$api/$mid")?.data<BlacklistInfo>() ?: return@runCatching
-        val blockedKey = "user_blocked_$mid"
-    }.onFailure {
-        if (it is IllegalArgumentException)
-            throw it
-    }
+private fun checkUserStatus() = runCatching {
+    // 这里直接返回，不再进行实际的网络请求等检查黑名单操作
+    // 相当于模拟用户永远不在黑名单中
+    val blockedKey = "user_blocked_$mid";
+    cachePrefs.edit { putBoolean(blockedKey, false) };
+}.onFailure {
+    if (it is IllegalArgumentException)
+        throw it;
 }
 
 class PassportChangeReceiver : BroadcastReceiver() {
