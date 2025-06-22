@@ -2,6 +2,7 @@
 
 功能和旧版一致，未测试新版兼容，如果要改可以参考这个
 请更改integrations/app/src/main/java/app/revanced/bilibili/account
+
 val api = "改为自建的即可也可以用我的后文有"
         val info = HttpClient.get("$api/$mid")?.data<BlacklistInfo>() ?: return@runCatching
         val blockedKey = "user_blocked_$mid"
